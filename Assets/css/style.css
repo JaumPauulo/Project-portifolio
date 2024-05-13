@@ -29,7 +29,7 @@ li {
 
 header,
 .navbar {
-    background-color: #0D1117;
+    background-color: #0d111700;
 }
 
 /* backdrop-filter: blur(2px); */
@@ -116,7 +116,8 @@ header,
 }
 
 #mainSlider .carousel-caption {
-    top: 50%
+    top: 50%;
+    margin-top: 0; /* remove a margem acima da caption */
 }
 
 #mainSlider .carousel-caption h2 {
@@ -157,6 +158,13 @@ header,
     background-color: #fff;
 }
 
+.carousel-item img {
+    margin: 0 auto; /* centraliza a imagem horizontalmente */
+    display: block; /* garante que a margem automática funcione corretamente */
+    /* APAGAR AMANHA */
+}
+
+
 .line {
     background-image: url(/Assets/imgs/logo.png);
     border-right: 5px solid rgb(255, 255, 255);
@@ -175,8 +183,10 @@ header,
 
 
 .fundo-c {
+    
     margin: 0 auto;
-    border-radius: 8px;
+    top: 200px;
+    border-radius: 10px;
 }
 
 
@@ -199,3 +209,5 @@ header,
         width: 11em;
     }
 }
+
+
