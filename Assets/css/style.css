@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap');
+
 /* Gerais */
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #0D1117;
 }
 
 .row {
@@ -11,9 +14,14 @@ body {
     padding: 70px 0;
 }
 
+p{
+    margin: 0 auto;
+    max-width: 520px;
+}
+
 p,
 li {
-    color: #444;
+    color: #ffffff;
     font-size: 14px;
 }
 
@@ -21,8 +29,10 @@ li {
 
 header,
 .navbar {
-    background-color: rgb(0, 0, 0);
+    background-color: #0D1117;
 }
+
+/* backdrop-filter: blur(2px); */
 
 #nav-container {
     padding-top: 0;
@@ -30,10 +40,12 @@ header,
 }
 
 #logo {
-    width: 75px;
+    width: 70px;
 }
 
 .navbar-brand {
+    background-color: #FF0000;
+    border-radius: 8px;
     padding: 0;
     color: #fff;
 }
@@ -62,27 +74,30 @@ header,
 
 #mainSlider .carousel-inner,
 #mainSlider .carousel-item {
-    height: 90vh;
+    height: 100%;
 }
 
 #mainSlider .carousel-caption {
-    top: 50%;
+    top: 50%
 }
 
 #mainSlider .carousel-caption h2 {
     font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 300px;
 }
 
 #mainSlider .carousel-caption p {
     font-size: 22px;
     font-weight: 300;
     margin-bottom: 100px;
+    border-radius: 5px;
+    background-color: #d10000;
     color: #fff;
 }
 
 .main-btn {
-    background-color: #65daf9;
+    font-family: Sora;
+    background-color: #FF0000;
     color: #fff;
     text-transform: uppercase;
     width: 200px;
@@ -97,66 +112,56 @@ header,
     text-decoration: none;
     color: #fff;
     background-color: transparent;
-    border-color: #65daf9;
+    border-color: #FF0000;
 }
 
 .carousel-indicators .active {
-    background-color: #65daf9;
+    background-color: #fff;
 }
 
-.msg-center {
-    display: flex;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 50px;
-}
-
-.animation {
-    display: flex;
-    width: 100%;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000000000;
-    text-align: center;
-    
-    color: #00ff0d;
-    font-size: 1.5rem;
-    font-weight: 700;
-
-    border-right-color: 50px solid #ffffff;
+.line {
+    border-right: 5px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-family: 'Sora';
+    font-size: 3em;
+    margin: 0 auto;
     white-space: nowrap;
     overflow: hidden;
-
-    width: 0;
-
-    animation: mark .5s step-end infinite, write 4s steps(22, end) infinite;
+    width: 520px;
 }
 
-@keyframes mark {
+.typing-animation {
+    animation: blinkCursor 500ms steps(30) infinite normal, typing 5s steps(30) 1s normal;
+}
 
-    50% {
+.txt-fixed {
+    position:absolute;
+    top:45%;
+    left:45%;
+}
+
+.fundo-c {
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: rgb(255, 255, 255);
+    }
+
+    to {
         border-right-color: transparent;
     }
 }
 
-@keyframes write {
-    0% {
-        width: 26.5ch;
-    }
-
-    70% {
-        width: 26.5ch;
-    }
-
-    85% {
+@keyframes typing {
+    from {
         width: 0;
     }
 
-    100% {
-        width: 0;
+    to {
+        width: 11em;
     }
 }
